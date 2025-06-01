@@ -1,0 +1,98 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #5a3e36;
+    outline: none;
+}
+
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background: #5a3e36;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #7a5e4e;
+}
+
+.flash-messages {
+    margin-bottom: 15px;
+}
+
+.flash {
+    background-color: #ffcccc;
+    color: #900;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subtitle-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.subtitle-list li {
+    background: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.subtitle-list li a {
+    color: #5a3e36;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subtitle-list li a:hover {
+    text-decoration: underline;
+}

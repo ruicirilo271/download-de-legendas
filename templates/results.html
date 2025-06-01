@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resultados - {{ query }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Legendas para: "{{ query }}"</h1>
+        <a href="/">← Nova busca</a>
+
+        {% if subtitles %}
+            <ul class="subtitle-list">
+                {% for sub in subtitles %}
+                <li>
+                    <strong>{{ sub.attributes.release }}</strong> —
+                    Idioma: {{ sub.attributes.language }}
+                    — Downloads: {{ sub.attributes.downloads_count }}
+                    — <a href="{{ url_for('download', file_id=sub.attributes.files[0].file_id) }}">Download</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma legenda encontrada.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
